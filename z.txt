@@ -1,0 +1,31 @@
+1. Routing by folder structure
+2. page.jsx must be included in every folder
+3. loading automatic. Just need to add a component named loading,jsx (But it not worked in my case)
+4. We can use next.js both for client side and server side randaring. By default it works server side, in our perpose we can change this. Only need to add "use client" at the top. Then that page/ component works for client side. 
+When it seems that user has to interect with website, like clicking the button to toggole website theme color, registration that don't need to seo, Only user preferrence, then use client side. Otherwise, server side.
+5. Common elements' styles should be in globals.css file or any files. To add css for a specific module, make a css file with page.module.css. Then import it and use it.
+5. If Images don't want to work, then have to add image domain at the next.config.js section. 
+6. For data fatching, we use useeffect for the client side. But for the server side, we use an async function. This data fatching fuction will be provided in next.js website data fatching tab. Locan json file, don't need to fetch.
+7. Getting params is easy more than react. Beside the component name, on the curly braces, we can get params like children which we see in the react. Do not need to import useParams. Easy.
+8. Instead of use useEffect, we can use Next.js SWR hook. Then we can get many features like "loading", "error", even "mute".  
+9. API ROUTE: We can use use frontend , backend in same environment. Need to structure file as the route we have created. Like, if we have a route localhost://3000/api/posts/{rendom id} then we have to make file like this structure.  Under app [api/posts/[id]]. For all api route, we need to save file as route.js. Not page.jsx.4
+10. Based on content, we can change page title also. Even the content generated on server side. It can not possible on React.
+10. Instead of using useNavigate, we use useRouter in next.js. Instead of navigate("//"), use router.push("//") But need to see, the import. It should come from next/navigation.
+11. Things that we do in generally on server side index.js, (api request response) works, that has to done in the api folder. And all the request response url will work by the endpoint. like 
+
+export const GET = async () => {
+  try {
+    connection(); // call a function to add database.
+    const posts = await Post.find(); // mongodb query
+
+    return new NextResponse(JSON.stringify(posts), { status: 200 }); // don't have app.send(). to response to browser, need to use NextResponse();
+
+  } catch (err) {
+    return new NextResponse("Database connection error!", { status: 500 });
+  }
+};
+
+thats it.
+
+12. User exist or not we can understand by useSession hook. easily. useSession.status === "authenticated" means user exists.
+13. If we want to refatch, we can use mutate function that comes form swr. In tanstack, we have refatch fuction, rather in swr, we have mutate.
