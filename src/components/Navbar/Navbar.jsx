@@ -3,7 +3,8 @@
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
-import styles from "./Navbar.module.css";
+import styles from "./Navbar.module.css"
+import Image from "next/image";
 
 const Navbar = () => {
   const session = useSession();
@@ -30,34 +31,47 @@ const Navbar = () => {
     },
     {
       id: 5,
-      title: "Contact",
-      url: "/contact",
+      title: "Dashboard",
+      url: "/dashboard",
     },
     {
       id: 6,
-      title: "Dashboard",
-      url: "/dashboard",
+      
+      title: "Contact",
+      url: "/contact",
     },
   ];
   return (
     <div
       style={{
         textAlign: "center",
-        padding: "20px 10px",
-        margin: "10px 0px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
+        flexDirection: "column",
+        marginRight: "50px",
+        padding: "10px 20px",
+        maxHeight: "850px"
       }}
     >
-      <DarkModeToggle />
+      
+      <Link href="/">
+        <Image
+          src="/vector/default-monochrome-white.svg"
+          height={100}
+          width={200}
+          alt=""
+        />
+      </Link>
       {links.map((link) => (
-        <Link style={{ padding: "0px 50px" }} key={link.id} href={link.url}>
+        <Link className={styles.btn_bg} style={{ padding: "20px 10px",
+        margin: "10px 0px", width: "100%", borderRadius: "5px", fontWeight: "550"}} key={link.id} href={link.url}>
           {link.title}
         </Link>
       ))}
       {session.status === "authenticated" && (
-        <button className={styles.logout} onClick={signOut}>
+        <button className={styles.btn_bg_diff} style={{ padding: "20px 10px",
+        margin: "10px 0px", width: "100%",  border: "none", borderRadius: "5px", fontWeight: "550"}} onClick={signOut}>
           LogOut
         </button>
       )}

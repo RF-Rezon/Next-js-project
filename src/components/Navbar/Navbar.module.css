@@ -1,8 +1,6 @@
-.logout {
-  padding: 5px;
-  border: none;
-  background-color: #53c28b;
-  color: white;
-  cursor: pointer;
-  border-radius: 3px;
+.btn_bg{
+    background-color: #59bce4;
+}
+.btn_bg_diff{
+    background-color: azure;
 }

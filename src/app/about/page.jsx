@@ -2,13 +2,11 @@ import Button from "@/components/Button/Button";
 import Image from "next/image";
 import styles from "./page.module.css";
 
-
 export async function generateMetadata({ params }) {
-  
   return {
     title: "About page",
-    description: 'About description',
-  }
+    description: "About description",
+  };
 }
 
 const About = () => {
@@ -21,45 +19,42 @@ const About = () => {
           alt=""
           className={styles.img}
         />
-        <div className={styles.imgText}>
-          <h1 className={styles.imgTitle}>Digital Storytellers</h1>
-          <h2 className={styles.imgDesc}>
-            Handcrafting award winning digital experiences
-          </h2>
-        </div>
       </div>
       <div className={styles.textContainer}>
         <div className={styles.item}>
-          <h1 className={styles.title}>Who Are We?</h1>
+          <h1 className={styles.title}>About NexusHub</h1>
           <p className={styles.desc}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            quae dolor, optio voluptatibus magnam iure esse tempora beatae. A
-            suscipit eos. Animi quibusdam cum omnis officiis voluptatum quo ea
-            eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ducimus quae dolor, optio voluptatibus magnam iure esse tempora
-            beatae, a suscipit eos. Animi quibusdam cum omnis officiis
+            Welcome to Nexushub, a dynamic agency at the forefront of
+            cutting-edge digital solutions. At Nexushub, we specialize in a
+            diverse range of services, seamlessly blending creativity with
+            technology to bring your visions to life. Our talented team excels
+            in crafting captivating illustrations that tell your unique story,
+            while our expertise extends to the development of CMS websites that
+            not only showcase your brand but also provide an intuitive user
+            experience.
             <br />
-            <br />
-            voluptatum quo ea eveniet? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Ducimus quae dolor, optio voluptatibus magnam iure
-            esse tempora beatae, a suscipit eos. Animi quibusdam cum omnis
-            officiis voluptatum quo ea eveniet?
+            But that is not all – Nexushub is your go-to destination for the
+            development of web and mobile applications, desktop applications,
+            and the integration of innovative technologies such as Augmented
+            Reality and Artificial Intelligence. We believe in pushing
+            boundaries, and our commitment to staying ahead of the curve ensures
+            that we deliver solutions that are not just current but
+            future-proof. Our comprehensive suite of services goes beyond
+            development.
           </p>
         </div>
         <div className={styles.item}>
           <h1 className={styles.title}>What We Do?</h1>
           <p className={styles.desc}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            quae dolor, optio voluptatibus magnam iure esse tempora beatae, a
-            suscipit eos. Animi quibusdam cum omnis officiis voluptatum quo ea
-            eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit. -
-            Creative Illustrations
+            We are also your partners in Digital Marketing, strategizing and
+            executing campaigns that drive engagement, boost visibility, and
+            elevate your brand in the digital landscape. At Nexushub, we thrive
+            on challenges, transforming ideas into realities, and empowering
+            businesses to thrive in the ever-evolving digital realm. Discover
+            the synergy of creativity, technology, and innovation at Nexushub –
+            where we do not just create solutions; we shape digital experiences
+            that leave a lasting impact.
             <br />
-            <br /> - Dynamic Websites
-            <br />
-            <br /> - Fast and Handy
-            <br />
-            <br /> - Mobile Apps
           </p>
           <Button url="/contact" text="Contact" />
         </div>

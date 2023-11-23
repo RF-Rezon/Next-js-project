@@ -16,9 +16,9 @@
   position: absolute;
   bottom: 20px;
   left: 20px;
-  background-color: #53c28b;
   padding: 5px;
   color: white;
+  background-color: #59bce4;
 }
 
 .textContainer {
@@ -38,4 +38,12 @@
   font-size: 18px;
   font-weight: 300;
   text-align: justify;
+}
+.imgDesc{
+  font-size: 18px;
+  font-weight: 300;
+  padding: 10px 5px;
+}
+.imgTitle{
+  padding: 10px 5px 0px 5px;
 }

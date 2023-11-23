@@ -10,10 +10,28 @@ const Portfolio = () => {
           <span className={styles.title}>Illustrations</span>
         </Link>
         <Link href="/portfolio/websites" className={styles.item}>
-          <span className={styles.title}>Websites</span>
+          <span className={styles.title}>Cms Websites</span>
         </Link>
         <Link href="/portfolio/applications" className={styles.item}>
-          <span className={styles.title}>Application</span>
+          <span className={styles.title}>Web Applications</span>
+        </Link>
+        <Link href="/portfolio/applications" className={styles.item}>
+          <span className={styles.title}>Mobile Applications</span>
+        </Link>
+        <Link href="/portfolio/applications" className={styles.item}>
+          <span className={styles.title}>Desktop Applications</span>
+        </Link>
+        <Link href="/portfolio/applications" className={styles.item}>
+          <span className={styles.title}>Augmented Reality</span>
+        </Link>
+        <Link href="/portfolio/applications" className={styles.item}>
+          <span className={styles.title}>Artificial Intelligence</span>
+        </Link>
+        <Link href="/portfolio/applications" className={styles.item}>
+          <span className={styles.title}>Video Editing</span>
+        </Link>
+        <Link href="/portfolio/applications" className={styles.item}>
+          <span className={styles.title}>Extra: Digital Marketing</span>
         </Link>
       </div>
     </div>

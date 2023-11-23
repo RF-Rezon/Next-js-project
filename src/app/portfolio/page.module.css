@@ -2,16 +2,14 @@
   font-size: 100px;
 }
 
-.portfolio {
-}
-
 .selectTitle {
   margin: 20px 0px;
 }
 
 .items {
-  display: flex;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 100px;
 }
 
 .item {
@@ -30,17 +28,35 @@
   background: url("/websites.jpg");
 }
 .item:nth-child(3) {
+  background: url("/websites_2.jpg");
+}
+.item:nth-child(4) {
   background: url("/apps.jpg");
+}
+.item:nth-child(5) {
+  background: url("/desktop.jpg");
+}
+.item:nth-child(6) {
+  background: url("/aug.jpg");
+}
+.item:nth-child(7) {
+  background: url("/ai.jpg");
+}
+.item:nth-child(8) {
+  background: url("/video_editing.jpg");
+}
+.item:nth-child(9) {
+  background: url("/dm.jpg");
 }
 
 .title {
   position: absolute;
   right: 10px;
   bottom: 10px;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
 }
 
 .item:hover .title {
-  color: #53c28b;
+  color: #59bce4;
 }

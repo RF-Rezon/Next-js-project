@@ -1,6 +1,9 @@
 .container {
   display: flex;
+  flex-direction: column;
   gap: 100px;
+  margin: 100px 0px;
+  width: 100%;
 }
 
 .posts {
@@ -10,14 +13,16 @@
 .post {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 50px 0px;
 }
 
 .imgContainer {
-  width: 200px;
+  margin-right: 20px;
+  position: relative;
+  object-fit: cover;
   height: 100px;
-  position: Ū;
+  width: 200px;
 }
 
 .img {
@@ -25,8 +30,8 @@
 }
 
 .delete {
-  cursor: pointer;
   color: red;
+  font-weight: 800;
 }
 
 .new {
@@ -50,9 +55,12 @@
 .button {
   padding: 20px;
   cursor: pointer;
-  background-color: #53c28b;
+  background-color: #59bce4;
   border: none;
   border-radius: 5px;
   color: #eee;
   font-weight: bold;
+}
+.postTitle{
+  margin-right: 15px;
 }
