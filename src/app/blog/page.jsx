@@ -3,15 +3,20 @@ import Link from "next/link";
 import styles from "./page.module.css";
 
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/posts", {
-    cache: "no-store",
-  });
+  try {
+    const res = await fetch("http://localhost:3000/api/posts", {
+      cache: "no-store",
+    });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+    return res.json();
+    
+  } catch (error) {
+    console.error("Error fetching data:", error.message);
+    return [];
   }
-
-  return res.json();
 }
 
 const Blog = async () => {
