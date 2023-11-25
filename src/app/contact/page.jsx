@@ -12,6 +12,7 @@ const Contact = () => {
     <div className={styles.container}>
       <h1 className={styles.title}>Lets Keep in Touch</h1>
       <div className={styles.content}>
+        <img src="/contact.svg" alt="" style={{width: "50%", padding: "30px 0px 80px 0px"}}/>
         <form className={styles.form}>
           <input type="text" placeholder="name" className={styles.input} />
           <input type="text" placeholder="email" className={styles.input} />
