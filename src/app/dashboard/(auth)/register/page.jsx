@@ -36,8 +36,8 @@ const Register = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Create an Account</h1>
-      <h2 className={styles.subtitle}>Please sign up to see the dashboard.</h2>
+      <h1 style={{fontSize: "40px"}}>Create an Account</h1>
+      <h2 style={{fontSize: "20px", marginBottom: "20px"}}>Please sign up to see the dashboard.</h2>
       <form onSubmit={handleSubmit} className={styles.form}>
         <input
           type="text"
@@ -57,11 +57,11 @@ const Register = () => {
           required
           className={styles.input}
         />
-        <button className={styles.button}>Register</button>
+        <button style={ {fontWeight: "600", fontSize: "15px" }} className={styles.button}>Register</button>
         {error && "Something went wrong!"}
       </form>
       <span className={styles.or}>- OR -</span>
-      <Link className={styles.link} href="/dashboard/login">
+      <Link style={{fontSize: "16px", backgroundColor: "#A7DDF2", padding: "15px 20px", borderRadius:"5px", color: "black", fontWeight:"600"}} className={styles.link} href="/dashboard/login">
         Login with an existing account
       </Link>
     </div>
